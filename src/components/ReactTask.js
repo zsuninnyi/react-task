@@ -1,6 +1,7 @@
 import React from 'react';
-import Footer from './Footer.js';
+import Header from './Header.js';
 import Options from './Options.js';
+import Footer from './Footer.js';
 
 class ReactTask extends React.Component {
     state = { 
@@ -17,9 +18,7 @@ class ReactTask extends React.Component {
                 <main role="main">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-3 col-xs-12">
-                                Test
-                            </div>
+                            <Header />
                             <Options 
                                 options={this.state.options} 
                                 addOption={this.addOption}
