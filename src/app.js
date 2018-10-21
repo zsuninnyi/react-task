@@ -2,12 +2,14 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactTask from './components/ReactTask.js';
 
+import 'bootstrap-css';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
 const app = document.getElementById('app');
  
-console.log('run 2');
+console.log('run 3');
 
-ReactDOM.render(<div>React task</div>,app);
+ReactDOM.render(<ReactTask />,app); 
