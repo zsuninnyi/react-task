@@ -11,6 +11,10 @@ class ReactTask extends React.Component {
     editOption = (e, index) => {   
         const newValue = e.target.value;
         const elemIndex = index;
+        if (newValue === "") {
+            this.deleteOption(index);
+            return false;
+        }
         let tempArray = [...this.state.options];
         tempArray[elemIndex] = newValue;
         this.setState( (prevState) => {
@@ -23,9 +27,8 @@ class ReactTask extends React.Component {
         });
     };
 
-    deleteOption = (optionIndex, optionValue) => {
+    deleteOption = (optionIndex) => {
         this.setState((prevState) => {
-            console.log('prevState: ', prevState);
             return {
                 options: prevState.options.filter((elem, index) => {
                     return optionIndex !== index;

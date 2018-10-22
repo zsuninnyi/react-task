@@ -3,7 +3,7 @@ import Option from './Option.js';
 
 const Options = (props) => {
     return (
-        <div className="col-lg-9 col-xs-12">
+        <div className="col-lg-9 col-xs-12 options">
             {
                 (props.options.length) && (
                     props.options.map( (option, index) => {

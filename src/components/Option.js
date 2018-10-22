@@ -1,25 +1,31 @@
 import React from 'react';
+import * as Md from 'react-icons/md';
 
 const Option = (props) => {
     let id = "option-" + props.index;
     return ( 
         <div>
-            <div><label htmlFor={id}>Test Attribute</label></div>
-            <input type="text" id={id}  className="input-text" value={props.text} onChange={(e) => {
-                        props.editOption(e, props.index);
-                    }
-                } 
-                count={props.count}/>
-            {
-                (props.text) && (
-                    <button onClick={() => {
-                                props.deleteOption(props.index, props.text)
-                            }
+            <div className="group">
+                <input type="text" id={id}  className="input-text" required value={props.text} onChange={(e) => {
+                            props.editOption(e, props.index);
                         }
-                    >
-                    Delete</button>
-                )
-            }
+                    } 
+                    count={props.count}/>
+                {
+                    (props.text) && (
+                        <button className="delete-button" onClick={() => {
+                                    props.deleteOption(props.index, props.text)
+                                }
+                            }
+                        >
+                        <Md.MdClear/>
+                        </button>
+                    )
+                }
+                <span className="highlight"></span>
+                <span className="bar"></span>
+                <label htmlFor={id}>Test Attribute</label>
+            </div>
         </div>
      );
 }
