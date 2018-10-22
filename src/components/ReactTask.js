@@ -5,7 +5,14 @@ import Footer from './Footer.js';
 
 class ReactTask extends React.Component {
     state = { 
-        options : [""]
+        options : [''],
+        labels: {
+            'save': 'Save',
+            'cancel': 'Cancel',
+            'headline': 'Test Headline',
+            'attribute': 'Test Attribute',
+            'error': 'Something went wrong!'
+        }
     };
     
     editOption = (e, index) => {   
@@ -50,16 +57,22 @@ class ReactTask extends React.Component {
                 <main role="main">
                     <div className="container">
                         <div className="row">
-                            <Header />
+                            <Header 
+                                labels={this.state.labels}
+                            />
                             <Options 
                                 options={this.state.options} 
                                 editOption={this.editOption}
                                 deleteOption={this.deleteOption}
+                                labels={this.state.labels}
                             />
                         </div>
                     </div>
                 </main>
-                <Footer saveOptions={this.saveOptions}/>
+                <Footer 
+                    saveOptions={this.saveOptions}
+                    labels={this.state.labels}
+                />
             </div>
          );
     };

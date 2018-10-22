@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Header = () => {
+const Header = (props) => {
     return ( 
         <div className="col-lg-3 col-xs-12 sidebar">
-            Test headline
+            {props.labels.headline}
         </div>
      );
 }

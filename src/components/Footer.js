@@ -7,8 +7,8 @@ const Footer = (props) => {
                 <div className="row">
                     <div className="col">
                         <div className="float-right">
-                            <button className="btn">Cancel</button>
-                            <button className="btn save" onClick={props.saveOptions}>Save</button>
+                            <button className="btn">{props.labels.cancel}</button>
+                            <button className="btn save" onClick={props.saveOptions}>{props.labels.save}</button>
                         </div>
                     </div>    
                 </div>

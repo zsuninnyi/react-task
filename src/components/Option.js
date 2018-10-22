@@ -24,7 +24,7 @@ const Option = (props) => {
                 }
                 <span className="highlight"></span>
                 <span className="bar"></span>
-                <label htmlFor={id}>Test Attribute</label>
+                <label htmlFor={id}>{props.labels.attribute}</label>
             </div>
         </div>
      );

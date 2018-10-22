@@ -14,6 +14,7 @@ const Options = (props) => {
                                 index={index}
                                 editOption={props.editOption}
                                 deleteOption={props.deleteOption}
+                                labels={props.labels}
                             />
                         )
 
@@ -22,7 +23,7 @@ const Options = (props) => {
             }
             {
                 (!props.options.length) && (
-                    <span className="alert alert-danger">Something went wrong!</span>
+                    <span className="alert alert-danger">{props.labels.error}</span>
                 )
             }
         </div>
