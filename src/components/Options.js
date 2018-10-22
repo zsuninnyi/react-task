@@ -1,5 +1,6 @@
 import React from 'react';
 import Option from './Option.js';
+import PropTypes from 'prop-types';
 
 const Options = (props) => {
     return (
@@ -30,4 +31,13 @@ const Options = (props) => {
      );
 }
  
+Options.propTypes = {
+    options: PropTypes.array.isRequired
+}
+
+Options.defaultProps = {
+    options: ['']
+}
+
 export default Options;
+

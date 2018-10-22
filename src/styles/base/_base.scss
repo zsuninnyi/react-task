@@ -8,8 +8,22 @@ body {
     min-width: 320px;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
 button {
     cursor: pointer;
+}
+
+#app {
+    position: relative;
+    min-height: 100%;
+}
+
+.wrapper {
+    padding-bottom: 60px;
 }
 
 button:disabled {

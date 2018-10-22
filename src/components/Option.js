@@ -1,5 +1,6 @@
 import React from 'react';
 import * as Md from 'react-icons/md';
+import PropTypes from 'prop-types';
 
 const Option = (props) => {
     let id = "option-" + props.index;
@@ -29,5 +30,11 @@ const Option = (props) => {
         </div>
      );
 }
- 
+
+Option.propTypes = {
+    index: PropTypes.number.isRequired,
+    text: PropTypes.string.isRequired,
+    labels: PropTypes.object.isRequired
+};
+
 export default Option;
