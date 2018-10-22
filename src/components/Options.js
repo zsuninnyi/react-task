@@ -13,10 +13,16 @@ const Options = (props) => {
                                 text={option}
                                 index={index}
                                 editOption={props.editOption}
+                                deleteOption={props.deleteOption}
                             />
                         )
 
                     })
+                )
+            }
+            {
+                (!props.options.length) && (
+                    <span className="alert alert-danger">Something went wrong!</span>
                 )
             }
         </div>
