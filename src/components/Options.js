@@ -9,10 +9,10 @@ const Options = (props) => {
                     props.options.map( (option, index) => {
                         return (
                             <Option 
-                                key={index + (Math.random() * 1000)}
+                                key={index + 1}
                                 text={option}
-                                count={index}
-                                addOption={props.addOption}
+                                index={index}
+                                editOption={props.editOption}
                             />
                         )
 

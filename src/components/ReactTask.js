@@ -8,8 +8,14 @@ class ReactTask extends React.Component {
         options : ["one", "two", "three"]
     };
     
-    addOption(e) {   
-        console.log('data: ', e.target);
+    editOption = (e, index) => {   
+        const newValue = e.target.value;
+        const elemIndex = index;
+        let tempArray = [...this.state.options];
+        tempArray[elemIndex] = newValue;
+        this.setState({
+                options: tempArray
+        });
     };
 
     render() { 
@@ -21,7 +27,7 @@ class ReactTask extends React.Component {
                             <Header />
                             <Options 
                                 options={this.state.options} 
-                                addOption={this.addOption}
+                                editOption={this.editOption}
                             />
                         </div>
                     </div>

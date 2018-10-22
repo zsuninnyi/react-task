@@ -1,10 +1,14 @@
 import React from 'react';
 
 const Option = (props) => {
-    console.log('props: ', props);
     return ( 
         <div>
-            <input type="text" value={props.text} onChange={props.addOption} count={props.count}/>
+            <input type="text" value={props.text} onChange={(e) => {
+                        console.log('e: ', e);
+                        props.editOption(e, props.index);
+                    }
+                } 
+                count={props.count}/>
         </div>
      );
 }
