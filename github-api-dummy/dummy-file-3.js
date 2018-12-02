@@ -8,5 +8,5 @@ function randomString() {
 		var rnum = Math.floor(Math.random() * chars.length);
 		randomstring += chars.substring(rnum,rnum+1);
 	}
-	document.randform.randomfield.value = randomstring;
+	//document.randform.randomfield.value = randomstring;
 }
